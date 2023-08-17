@@ -6,12 +6,16 @@
 print("Your Coding Adventure Begins")
 
 # Challenge: use print() to print the following...
+name = "mikey"
+course = "acs1100"
+color = "sky blue"
 
 # Print your name
-
+print(name)
 # Print this course 
-
+print(course)
 # Print your favorite color
+print(color)
 
 # Any line of code in Python that begins with # is a comment! 
 # comments are for notes. These lines are not run as code. 

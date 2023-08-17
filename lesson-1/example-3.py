@@ -6,16 +6,22 @@
 # and a level
 
 # Define a variable named score give it a value
+score = 100
 
 # Define a variable named name, use your name but wrap it in ""
+name = "mikey"
 
 # Define a variable named level make this a number
+level = 1
 
 # Print the name variable: 
+print(name)
 
 # print the score variable 
+print(score)
 
 # print the level variable
+print(level)
 
 # Run this file in the terminal
 
