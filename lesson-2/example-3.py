@@ -8,3 +8,5 @@ name = "Mario"
 # to display the same message using an f string:
 
 print(str(name) + " scored " + str(score) + " points and completed level " + str(level))
+
+print(f"{name} scored {score} points and completed level {level}")
