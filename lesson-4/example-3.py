@@ -8,6 +8,5 @@ month = input('What month were you born? ')
 day = input('What day were you born? ')
 age = input('How old did you turn this year? ')
 
-# Prints the age user turns in 2021
+# Prints the age user turns in 2023
 print(f"On {month} {day}, 2021, {name} will be {int(age)+1} years old!")
-

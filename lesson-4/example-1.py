@@ -5,7 +5,7 @@
 # Often the code editor will help you find syntax errors
 # Look for a red underline. 
 
-city = "San Francisco
+city = "San Francisco"
 print(f"Welcome to {city}")
 
 # The code below is error free introduce a syntax error!
