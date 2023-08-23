@@ -97,6 +97,7 @@ def get_date(user_date):
     # create datetime object
     d = datetime.datetime(year, month, day)
 
+    # return d as a datetime object
     return d
 
 start_date = get_date("start_date")
