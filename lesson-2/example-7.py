@@ -10,7 +10,7 @@ cart_total = item_1 + item_2 + item_3
 # Task 1️⃣ :
 # Use f-strings , print a message to tell the user
 # their total. Example: Joi's cart balance is 24.31
-print( f"{username}'s cart balance is {cart_total}")
+print(f"{username}'s cart balance is {cart_total}")
 
 
 # Task 2️⃣ :

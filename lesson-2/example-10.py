@@ -7,5 +7,4 @@ height = float(height) # Converts str to float!
 # Before we can calculate it, we need to convert it to the correct
 # data type... in this case, height should be an float
 
-
 print(f"The length of the snowboard you need is: {height * 2.54 * 0.88} cm")
