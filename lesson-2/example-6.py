@@ -36,11 +36,13 @@ line_6 = "Whisper " + wisdom + ", " + be
 # Challenge! Put the song together and print 
 # the lyrics to the console:
 
-print(line_1)
-print(line_2)
-print(line_3)
-print(line_4)
-print(line_5)
+print(f"""
+{line_1}
+{line_2}
+{line_3}
+{line_4}
+{line_5}
+""")
 
 # DRY is an accronym for Don't Repeat Yourself! 
 # Its a best practice for computer programmers! 
@@ -125,8 +127,3 @@ print(f"""
 {line_15}
 {line_16}
       """)
-
-# Stretch goal: After solving the above challenge identify any 
-# repeated lyrics and use a variable
-
-# Stretch Challenge: As above but use your own lyrics
