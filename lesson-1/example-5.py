@@ -23,3 +23,7 @@ my_score =  99
 my_friend_score = 60
 high_score = 99
 '''
+
+print("my_score", my_score)
+print("my_friend_score", my_friend_score)
+print("high_score", high_score)

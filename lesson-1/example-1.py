@@ -22,3 +22,5 @@ print(color)
 # Instead they are there to explain what is going on.
 
 # Challenge: Use a comment to explain the the print() function
+print("""Print objects to the text stream file, separated by sep and followed by end. sep, end, file, 
+      and flush, if present, must be given as keyword arguments.""")

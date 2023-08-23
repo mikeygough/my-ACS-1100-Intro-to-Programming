@@ -5,6 +5,7 @@
 age = 27
 
 # 2. Run this file in the terminal what do you see? 
+# Don't see anything because we haven't printed this value, just declared and assigned it.
 
 # Use print to display the value type: print(age)
 print(age)
@@ -18,7 +19,7 @@ age = height
 print(age)
 
 # 5. Save and run this file again. What do you see in the terminal?
-# Explain what happened using a comments below!
+# See the value '50' printed to the screen, since we reassigned age to equal the value of height.
 
 # For long comments you can use """ and """
 

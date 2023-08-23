@@ -15,13 +15,13 @@ name = "mikey"
 level = 1
 
 # Print the name variable: 
-print(name)
+print("name:", name)
 
 # print the score variable 
-print(score)
+print("score:", score)
 
 # print the level variable
-print(level)
+print("level:", level)
 
 # Run this file in the terminal
 
