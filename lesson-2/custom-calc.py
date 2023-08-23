@@ -23,6 +23,46 @@
 
 # Be sure to convert your numeric values to numbers before performing math operations!
 
+import datetime
 
+print("\nWecome to the Days-Between Calculator!")
+print("The Days-Between Calculator calculates the absolute number of days between a start_date and end_date.")
+print("Dates should be entered in the format YYYY-MM-DD. For example, August 1, 2023 entered as 2023-08-01.\n")
 
+# -- get user input start_date
+start_date = input("What is the start_date? (In the format YYYY-MM-DD): ")
 
+# error checking
+while len(str(start_date)) != 10:
+    print("Invalid Format! Please try again.")
+    start_date = input("What is the start_date? (In the format YYYY-MM-DD): ")
+
+# select year, month and day. convert to int
+year = int(start_date[0:4])
+month = int(start_date[5:7])
+day = int(start_date[8:10])
+
+# create datetime object
+start_date = datetime.datetime(year, month, day)
+
+# -- get user input end_date
+end_date = input("What is the end_date? (In the format YYYY-MM-DD): ")
+
+# error checking
+while len(str(end_date)) != 10:
+    print("Invalid Format! Please try again.")
+    end_date = input("What is the end_date? (In the format YYYY-MM-DD): ")
+
+# select year, month and day. convert to int
+year = int(end_date[0:4])
+month = int(end_date[5:7])
+day = int(end_date[8:10])
+
+# create datetime object
+end_date = datetime.datetime(year, month, day)
+
+# calculate days_between
+days_between = abs((start_date - end_date).days)
+
+# print result
+print(f"Days Between: {days_between:,}\n")
