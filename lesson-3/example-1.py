@@ -15,6 +15,8 @@ print(d)
 
 # What type is returned? How can you check the type? Do it that here:
 # i'd guess string, we can check with print(type(a))
+print("type a:", type(a))
+
 def add_ten(number): 
 	new_number = number + 10
 	return new_number
