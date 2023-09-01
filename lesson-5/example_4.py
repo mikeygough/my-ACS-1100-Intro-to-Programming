@@ -32,19 +32,22 @@ scones = 4
 # a scone. Write an if else statement. It should print: 
 # "I'll take a cookie!" if cookies is greater than 0
 # Otherwise it prints: "Give me a scone" 
-
-
-
-
-
+if cookies > 0:
+    print("I'll take a cookie!")
+else:
+    print("Give me a scone")
 
 # TODO: We need some code to help out the bakery ordering 
 # bot. The bot prefers cake, but if cake is not available
 # it will order a cookie. If no cookies are left it orders
 # a scone. Use if and elif to make the decision:
-
-cookies = 4
-cookie_type = "raisin cookie"
+cake = 0
+if cake > 0:
+    print("Cake")
+elif cookies > 0:
+    print("Cookie")
+else:
+    print("Scone")
 
 # Use an if else statement to check if there are any 
 # cookies left: cookies > 0
@@ -52,3 +55,13 @@ cookie_type = "raisin cookie"
 # if the cookie is NOT a raisin cookie print: 
 # "I want a cookie!"
 # Otherwise print: "Meh!"
+cookies = 1
+cookie_type = "chocolate chip cookie"
+
+if cookies > 0:
+    if cookie_type != "raisin cookie":
+        print("I want a cookie!")
+    else:
+        print("Meh!")
+else:
+    print("Darn I wanted a cookie!")

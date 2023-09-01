@@ -1,5 +1,5 @@
 
-# Use the and operator to check that two or more expressions 
+# Use the 'and' operator to check that two or more expressions 
 # are both true! 
 
 print('\n')
@@ -16,16 +16,23 @@ print(3 < 2 and 11 > 6) # False (since one of the expressions is false)
 # Then run the code and check your prediction agains the reuslts
 print('\n')
 
+print("Prediction False")
 print(12 > 13 and 13 > 12)
 
+print("Prediction True")
 print(14 < 15 and 0 == 0)
 
+print("Prediction True")
 print(15 - 10 < 6 and 6 <= 6)
 
+print("Prediction False")
 print(1 / 3 and 1 < 0)
 
+print("Prediction False")
 print("a" in "Hello" and "W" in "World")
 
+print("Prediction True")
 print("o" in "Hello World" and "oo" in "Foo Bar")
 
+print("Prediction False")
 print("April" in "April 1" and "Oct." in "October 31")
