@@ -9,9 +9,7 @@ index 2 Wuffles. 🐕
 '''
 
 # List of dog names
-
 dogs = ["Henry", "Rookie", "Wuffles", "Nugget"]
-
 
 # Print the first dog's name 
 print(dogs[0])
