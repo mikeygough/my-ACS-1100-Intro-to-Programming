@@ -13,7 +13,7 @@ and returns the lines of the file as a list
 # should be? 
 
 
-def read_candy(filename):
+def read_lines(filename):
   # Open
   infile = open(filename, 'r')
 
@@ -27,16 +27,5 @@ def read_candy(filename):
   return lines
 
 #TODO: print out all the lines of the candy file
-
-
-candy_lines = read_candy('candy.txt')
+candy_lines = read_lines('candy.txt')
 print(candy_lines)
-
-# TODO: Function Practice: modify the code you just wrote 
-# by creating a function called read_candy() that takes in 
-# the file name as a parameter and returns the lines of the 
-# file as a list
-
-
-# TODO: Read the file flavors.txt Print all of it's lines
-

@@ -1,7 +1,7 @@
 '''
 We can iterate over each line of a file using a for loop!
-
 '''
+
 # STEP 1: Store file name in a variable
 input_file_name = 'languages.txt'
 
@@ -9,7 +9,6 @@ input_file_name = 'languages.txt'
 infile = open(input_file_name, "r")
 
 # STEP 3: Files can be iterated over like a list. Use a for loop to iterate over the lines in a file.
-
 for line in infile:
   print(line, end='')
 

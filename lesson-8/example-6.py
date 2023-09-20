@@ -13,13 +13,12 @@ output_file_name = 'output.txt'
 outfile = open(output_file_name, "w")
 
 # STEP 3: Write the quote from Justice Ruth Bader Ginsburg to the file. 
-
 quote = "When will there be enough women on the court?' My answer is, 'When there are nine.'"
-
+my_quote = "こんにちは"
 
 # TODO: Store line 17 into a variable called num_characters and print it to see how many characters were written to the file.  
 
-num_char = outfile.write(quote)
+num_char = outfile.write(my_quote)
 print(num_char)
 
 

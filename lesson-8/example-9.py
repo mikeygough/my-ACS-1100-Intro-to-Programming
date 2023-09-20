@@ -10,7 +10,6 @@ output_file_name = 'output.txt'
 # STEP 2: Open the file in append mode ('a')
 outfile = open(output_file_name, "a")
 
-
 # STEP 3: Some teams were missing from the team of lists in output.txt. 
 # Let's add some of the missing teams
 
@@ -27,11 +26,13 @@ outfile.writelines(teams)
 # TODO: Append 3 more NFL Football teams to the file. Here is a 
 # list: https://www.alphalists.com/list/alphabetical-list-nfl-teams
 
+more_teams = [
+    "Maimi Heat\n",
+    "Los Angeles Lakers\n",
+    "Boston Celtics\n"
+]
 
+outfile.writelines(more_teams)
 
 # STEP 4: Close the file (We will learn about this the next few slides!)
-
-
-
-# STEP 5: Close the file
 outfile.close()

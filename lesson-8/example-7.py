@@ -26,15 +26,11 @@ teams = [
 "Philadelphia Eagles\n",
 "Pittsburgh Steelers\n",
 "San Francisco 49ers\n",
+"New England Patriots\n"
 ]
 
 # outfile.write('Philadephia Eagles')
-outfile.writelines(team)
-  
-# Note that all of the lines are not one new lines. 
-
-# TODO: To fix this, add a \n character at the end of each string in the list
-
+outfile.writelines(teams)
 
 # STEP 4: Close the file (We will learn about this the next few slides!)
 outfile.close()
