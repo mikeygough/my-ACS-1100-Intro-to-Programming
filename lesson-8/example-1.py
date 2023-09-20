@@ -14,11 +14,10 @@ infile = open(input_file_name, "r")
 
 # STEP 3: 
 # Example: Using .read() read the first 100 characters of the file and print results
-
-read_data = infile.read(5) # Read a number of characters
+read_data = infile.read(100) # Read a number of characters
 print(read_data)
 
-entire_file = infile.read(3) # Remove the number to read the entire file
+entire_file = infile.read() # Remove the number to read the entire file
 print(entire_file)
 
 # STEP 4: Close the file (We will learn about this the next few slides!)
