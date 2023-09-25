@@ -3,7 +3,6 @@ Let's practice creating a dictionary!
 
 Dicitonaries are a collection of key:value pairs.
 
-
 dict_name = {key:value, key:value, key:value}
 
 '''
@@ -18,3 +17,5 @@ dict_name = {key:value, key:value, key:value}
 flavors = ["chicken", "beef", "cheese", "guava"]
 prices = [1.99, 1.99, 1.00, 2.50]
 
+menu = dict(zip(flavors, prices))
+print(menu)
