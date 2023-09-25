@@ -10,7 +10,6 @@ lines = infile.readlines()
 
 
 # Create a dictionary and call it play_count
-
 play_count = {}
 
 
@@ -28,7 +27,6 @@ for line in lines:
 
   # Added it to the dictionary called play_count
   play_count[key] = value
-
 
 print(play_count)
 

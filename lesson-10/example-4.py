@@ -9,7 +9,7 @@ We use the same [] approach that we used when accessing values.
 # sneakers we currently sell.
 
 inventory = {
-	'Jordan 1' : 1,
+  'Jordan 1' : 1,
   'Yeezy'    : 8,
   'Air Max'  : 10,
   'SB Dunk'  : 5,
@@ -22,10 +22,11 @@ inventory = {
 
 # Way 1 (not very dynamic tho) inventory['SB Dunk'] = 3
 # Print the updated value after updating the value
-
+inventory['SB Dunk'] -= 2
 
 
 # A customer came in to return a pair of Yeezys
 # TODO: Update the inventory of ['Yeezy'] += 1
+inventory['Yeezy'] += 1
 
-
+print(inventory)

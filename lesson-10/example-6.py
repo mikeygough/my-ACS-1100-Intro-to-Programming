@@ -19,10 +19,9 @@ inventory = {
 # TODO: 
 # We no longer sell Yeezys, so let's delete that item 
 # from our inventory
-
+del inventory['Yeezy']
 
 # Let's print our dictionary to see the changes 
-
 print(inventory)
 
 

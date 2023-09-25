@@ -1,5 +1,5 @@
 '''
-Let's practice updating values from dicitionaries.
+Let's practice updating values from dictionaries.
 
 We use the same [] approach that we used when updating values. 
 
@@ -16,10 +16,10 @@ print(dict) --> {new_key:new_value}
 # add to our inventory. 
 
 inventory = {
-	'Jordan 1' : 1,
-  'Yeezy'    : 8,
-  'Air Max'  : 10,
-  'SB Dunk'  : 5,
+    'Jordan 1' : 1,
+    'Yeezy'    : 8,
+    'Air Max'  : 10,
+    'SB Dunk'  : 5,
 	'Cortez'   : 20,
 	'Jordan 6' : 100 
 }
@@ -28,4 +28,7 @@ inventory = {
 # 1. Go to https://www.kicksonfire.com/app/
 # 2. Pick 3 sneakers we should sell at our shop
 # 3. Add 10 pairs of each to our inventory dictionary.
-
+inventory['Birkenstocks'] = 10
+inventory['Hoka One One'] = 10
+inventory['Vans'] = 10
+print(inventory)

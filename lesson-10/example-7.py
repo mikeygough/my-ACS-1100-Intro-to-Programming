@@ -3,9 +3,9 @@ Let's see the items() and for loop in action :D
 '''
 
 fruit_count = {
-	'Apple' : 10,
-  'Pear'  : 5,
-  'Mango' : 4 
+    'Apple' : 10,
+    'Pear'  : 5,
+    'Mango' : 4 
 }
 
 print(fruit_count.items())
@@ -17,12 +17,11 @@ for key, value in fruit_count.items():
 
 # TODO: Define a new loop. Loop over the fruit_count 
 # dictionary and add 4 to each count.
-
-
-
+for key, value in fruit_count.items():
+    fruit_count[key] += 4
 
 # TODO: Confirm this worked by printing fruit_count
-
+print(fruit_count)
 
 inventory = {
 	'Jordan 1' : 1,
@@ -37,6 +36,8 @@ inventory = {
 #TODO: Use a for loop to print out the key and value of 
 # each item in the inventory dictionary
 # Print f"You have {value} {key}"
+for key, value in inventory.items():
+    print(f"You have {value} {key}")
 
 
 
