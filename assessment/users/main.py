@@ -21,7 +21,7 @@ def load_data(filename):
 def create_user_dict(data_list):
     '''
     A function that takes output from load_data() and returns
-    a dictionary of user information represented with a dictionary
+    a dictionary of user information represented with a dictionary.
     
     Returns:
         dictionary of user dictionaries
@@ -45,7 +45,7 @@ def create_user_dict(data_list):
 
 def get_username():
     '''
-    A function that prompts the user for a name
+    A function that prompts the user for a name.
     
     Returns:
         name
@@ -55,7 +55,7 @@ def get_username():
 
 def get_password():
     '''
-    A function that prompts the user for a password
+    A function that prompts the user for a password.
     
     Returns:
         password
@@ -66,7 +66,7 @@ def get_password():
 def validate_user(username, password, data_dict):
     '''
     A function that loops through the user data_dict searching
-    for a user with matching name and password
+    for a user with matching name and password.
     
     Returns:
         the username (string) if the username exists
@@ -80,7 +80,7 @@ def accrue_interest(rate, data_dict):
     '''
     A function that loops through the user data_dict
     and adds an amount of interest to every users' balance.
-    Rate should be given as a percent, i.e. 0.10 is equal to 10%
+    Rate should be given as a percent, i.e. 0.10 is equal to 10%.
     
     Returns:
         NA
@@ -92,7 +92,7 @@ def accrue_interest(rate, data_dict):
 def deposit(username, password, data_dict, amount):
     '''
     A function that increases a validated users balance
-    by amount
+    by amount.
     
     Returns:
         NA
@@ -102,30 +102,62 @@ def deposit(username, password, data_dict, amount):
     if user:
         print(f'Depositing ${amount}')
         data_dict[user]['balance'] += amount
+        
+
+def withdraw(username, password, data_dict, amount):
+    '''
+    A function that decreases a validated users balance
+    by amount, if amount less than the current balance.
+    
+    Returns:
+        NA
+    '''
+    user = validate_user(username, password, data_dict)
+    
+    if user:
+        if amount <= data_dict[user]['balance']:
+            print(f'Withdrawing ${amount}')
+            data_dict[user]['balance'] -= amount
+        else:
+            print('Withdrawal amount exceeds available balance.')
 
 
 def main():
     
+    # load data
     data_list = load_data('data.txt')
     data_dict = create_user_dict(data_list)
+    
+    # log all users
+    print('Starting Balances')
+    for user in data_dict:
+        print(data_dict[user])
 
+    # get login information
     username = get_username()
     password = get_password()
-    
+    # validate
     user = validate_user(username, password, data_dict)
-    
     if user:
         print(f"Name: {data_dict[user]['full_name']}")
         print(f"Balance: {data_dict[user]['balance']}")
     else:
         print('User name and password not found.')
         
+    # S T R E T C H ---
     
     # accrue interest
     accrue_interest(0.10, data_dict)
     # deposit
     deposit(username, password, data_dict, 1000)
-    print(data_dict)
+    # withdraw
+    withdraw(username, password, data_dict, 5)
+    
 
+    # log all users
+    print('Ending Balances')
+    for user in data_dict:
+        print(data_dict[user])
+        
 main()
 
