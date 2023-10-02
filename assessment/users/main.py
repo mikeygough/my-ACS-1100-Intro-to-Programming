@@ -85,6 +85,7 @@ def accrue_interest(rate, data_dict):
     Returns:
         NA
     '''
+    print(f'All Accounts Accruing {rate * 100} % Interest')
     for user, information in data_dict.items():
         information['balance'] += information['balance'] * rate
 
@@ -100,7 +101,7 @@ def deposit(username, password, data_dict, amount):
     user = validate_user(username, password, data_dict)
     
     if user:
-        print(f'Depositing ${amount}')
+        print(f"Depositing ${amount} into {data_dict[user]['full_name']}'s Account")
         data_dict[user]['balance'] += amount
         
 
@@ -116,7 +117,7 @@ def withdraw(username, password, data_dict, amount):
     
     if user:
         if amount <= data_dict[user]['balance']:
-            print(f'Withdrawing ${amount}')
+            print(f"Withdrawing ${amount} from {data_dict[user]['full_name']}'s Account")
             data_dict[user]['balance'] -= amount
         else:
             print('Withdrawal amount exceeds available balance.')
@@ -130,8 +131,9 @@ def main():
     
     # log all users
     print('Starting Balances')
-    for user in data_dict:
-        print(data_dict[user])
+    for user in data_dict.items():
+        print(user)
+    print('\n')
 
     # get login information
     username = get_username()
@@ -145,7 +147,7 @@ def main():
         print('User name and password not found.')
         
     # S T R E T C H ---
-    
+    print('\nStretch Goals: ')
     # accrue interest
     accrue_interest(0.10, data_dict)
     # deposit
@@ -153,11 +155,11 @@ def main():
     # withdraw
     withdraw(username, password, data_dict, 5)
     
-
     # log all users
+    print('\n')
     print('Ending Balances')
-    for user in data_dict:
-        print(data_dict[user])
+    for user in data_dict.items():
+        print(user)
         
 main()
 
