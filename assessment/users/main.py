@@ -1,4 +1,4 @@
-def load_data():
+def load_data(filename):
     '''
     A function that reads a text file of data and returns 
     a list of strings where each string represents data from that row.
@@ -11,7 +11,7 @@ def load_data():
                  ]
         
     '''
-    f = open('data.txt', 'r')
+    f = open(filename, 'r')
     data_list = f.readlines()
     f.close()
     
@@ -69,18 +69,29 @@ def validate_user(username, password, data_dict):
     for a user with matching name and password
     
     Returns:
-        True if the user exists
-        False if the user does not exist
+        the username (string) if the username exists
     '''
     for user, information in data_dict.items():
         if information['username'] == username and information['password'] == password:
-            return True # username and password match
-    return False # no match
+            return user # username and password match, return user
 
-data_list = load_data()
-data_dict = create_user_dict(data_list)
 
-username = get_username()
-password = get_password()
+def main():
+    
+    data_list = load_data('data.txt')
+    data_dict = create_user_dict(data_list)
 
-print(validate_user(username=username, password=password, data_dict=data_dict))
+    username = get_username()
+    password = get_password()
+    
+    user = validate_user(username, password, data_dict)
+    
+    if user:
+        print(f"Name: {data_dict[user]['full_name']}")
+        print(f"Balance: {float(data_dict[user]['balance'])}")
+    else:
+        print('User name and password not found.')
+        
+
+main()
+
