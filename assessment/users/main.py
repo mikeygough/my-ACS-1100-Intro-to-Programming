@@ -76,7 +76,27 @@ def validate_user(username, password, data_dict):
             return user # username and password match, return user
 
 
+def accrue_interest(rate, data_dict):
+    '''
+    A function that loops through the user data_dict
+    and adds an amount of interest to every users' balance.
+    Rate should be given as a percent, i.e. 0.10 is equal to 10%
+    
+    Returns:
+        NA
+    '''
+    for user, information in data_dict.items():
+        information['balance'] += information['balance'] * rate
+
+
 def deposit(username, password, data_dict, amount):
+    '''
+    A function that increases a validated users balance
+    by amount
+    
+    Returns:
+        NA
+    '''
     user = validate_user(username, password, data_dict)
     
     if user:
@@ -101,9 +121,11 @@ def main():
         print('User name and password not found.')
         
     
-    
+    # accrue interest
+    accrue_interest(0.10, data_dict)
     # deposit
-    deposit(username, password, data_dict, 1000)    
+    deposit(username, password, data_dict, 1000)
+    print(data_dict)
 
 main()
 
