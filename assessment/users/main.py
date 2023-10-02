@@ -38,7 +38,7 @@ def create_user_dict(data_list):
         users[f'user {index}']['username'] = data[0] 
         users[f'user {index}']['password'] = data[1] 
         users[f'user {index}']['full_name'] = data[2] 
-        users[f'user {index}']['balance'] = data[3] 
+        users[f'user {index}']['balance'] = float(data[3])
     
     return users
 
@@ -76,6 +76,14 @@ def validate_user(username, password, data_dict):
             return user # username and password match, return user
 
 
+def deposit(username, password, data_dict, amount):
+    user = validate_user(username, password, data_dict)
+    
+    if user:
+        print(f'Depositing ${amount}')
+        data_dict[user]['balance'] += amount
+
+
 def main():
     
     data_list = load_data('data.txt')
@@ -88,10 +96,14 @@ def main():
     
     if user:
         print(f"Name: {data_dict[user]['full_name']}")
-        print(f"Balance: {float(data_dict[user]['balance'])}")
+        print(f"Balance: {data_dict[user]['balance']}")
     else:
         print('User name and password not found.')
         
+    
+    
+    # deposit
+    deposit(username, password, data_dict, 1000)    
 
 main()
 
